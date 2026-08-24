@@ -35,6 +35,7 @@ Python öğrenme sürecimde tuttuğum notlar, alıştırmalar ve küçük projel
 - `PandasExample.py` — Pandas ile örnekler
 - `MatplotlibExample.py` — Matplotlib ile grafik örnekleri
 - `ExcelQuiz.py` — Excel verisi ile mini quiz uygulaması
+- `putpatchdeleteexamples.py` — requests ile GET/PUT/PATCH/DELETE HTTP istek örnekleri
 
 ### Projeler (`Projects/`)
 
