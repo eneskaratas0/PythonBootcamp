@@ -63,6 +63,13 @@ Tarama tamamlandi !
 3. Tarama, `-t` ile belirtilen thread sayısında paralel yürütülür.
 4. Bulunan tüm subdomain'ler konsola yazdırılır.
 
+## Fonksiyonlar
+
+- `scan_word(word, domain)` — `{word}.{domain}` hostname'ini `socket.gethostbyname` ile çözümlemeye çalışır. Başarılıysa `{"host":..., "ip":...}` döner; hostname çözümlenemezse (`socket.gaierror`) ya da geçersizse (`UnicodeError`) `None` döner. `ThreadPoolExecutor` tarafından paralel çalıştırılan asıl tarama birimi.
+- `thread_count(value)` — `-t` argümanı için `argparse` doğrulayıcısı. Değeri int'e çevirir, 1-30 aralığında değilse `argparse.ArgumentTypeError` fırlatır.
+- `parse_args()` — CLI argümanlarını (`-d`, `-w`, `-t`) tanımlar, parse eder ve `Namespace` olarak döner.
+- `main()` — akışı yönetir: argümanları alır, wordlist dosyasını okur (hata varsa temiz mesajla çıkar), `functools.partial` ile `domain`'i sabitleyip `scan_word`'ü `ThreadPoolExecutor` ile tüm kelimelere paralel uygular, bulunan sonuçları filtreleyip yazdırır.
+
 ## Sorumluluk reddi
 
 Bu araç yalnızca **yetkiniz olan** hedefler üzerinde, eğitim ve güvenlik
