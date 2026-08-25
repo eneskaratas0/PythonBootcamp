@@ -39,7 +39,8 @@ Python öğrenme sürecimde tuttuğum notlar, alıştırmalar ve küçük projel
 
 ### Projeler (`Projects/`)
 
-- `BMI-Calculator` — Vücut kitle indeksi hesaplayıcı
+- `BMI-Calculator` — Tkinter ile vücut kitle indeksi (BMI) hesaplayıcı
+- `SubdomainFinder` — Çoklu thread'li CLI subdomain tarayıcı
 - `TurtleDrawingProjects` — Turtle grafik kütüphanesi ile çizim projeleri
 
 ### Veri Dosyaları
